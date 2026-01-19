@@ -1,61 +1,57 @@
-# 🚀 Getting started with Strapi
+# Friendly Dev Backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Este é o repositório do backend para o projeto **Friendly Dev**, construído com **Strapi**. Ele gerencia o conteúdo e fornece a API para a aplicação.
 
-### `develop`
+## 🚀 Tecnologias Utilizadas
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+- **[Strapi v5](https://strapi.io/)**: Headless CMS para gerenciamento de conteúdo.
+- **PostgreSQL**: Banco de dados relacional (configurado como dependência).
+- **Cloudinary**: Provedor para upload e gerenciamento de mídia.
 
-```
-npm run develop
-# or
-yarn develop
-```
+## 🛠️ Instalação e Configuração
 
-### `start`
+Siga os passos abaixo para rodar o projeto localmente:
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+1.  **Clone o repositório e acesse a pasta:**
+    \`\`\`bash
+    git clone <url-do-repositorio>
+    cd friendly-dev-backend
+    \`\`\`
 
-```
-npm run start
-# or
-yarn start
-```
+2.  **Instale as dependências:**
+    \`\`\`bash
+    npm install
 
-### `build`
+    # ou
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+    yarn install
+    \`\`\`
 
-```
-npm run build
-# or
-yarn build
-```
+3.  **Configure as variáveis de ambiente:**
 
-## ⚙️ Deployment
+    - Crie um arquivo \`.env\` na raiz do projeto.
+    - Copie o conteúdo de \`.env.example\` para o \`.env\`.
+    - Preencha as chaves necessárias (chaves de banco de dados, chaves do Cloudinary, secrets do Strapi).
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+4.  **Inicie o servidor de desenvolvimento:**
+    \`\`\`bash
+    npm run develop
+    # ou
+    yarn develop
+    \`\`\`
 
-```
-yarn strapi deploy
-```
+O painel administrativo estará disponível em: [http://localhost:1337/admin](http://localhost:1337/admin)
+A API estará disponível em: [http://localhost:1337](http://localhost:1337)
 
-## 📚 Learn more
+## 📜 Scripts Disponíveis
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+- \`npm run develop\`: Inicia o servidor em modo de desenvolvimento (com auto-reload).
+- \`npm run start\`: Inicia o servidor em modo de produção.
+- \`npm run build\`: Constrói o painel administrativo.
+- \`npm run deploy\`: Script para deploy (se configurado).
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+## 📂 Estrutura Importante
 
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+- \`/config\`: Configurações do servidor, banco de dados e plugins.
+- \`/src/api\`: Definições das APIs (Controllers, Services, Routes, Models).
+- \`/public\`: Arquivos estáticos públicos.
